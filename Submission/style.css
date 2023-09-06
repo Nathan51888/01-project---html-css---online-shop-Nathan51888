@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: white;
+  font-family: "Lato", sans-serif;
+}
+
+/* Home page */
+/* Header */
+header {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  background-color: white;
+}
+
+.logo {
+  display: block;
+  text-align: center;
+  width: auto;
+  height: 13rem;
+  margin: auto;
+  padding: 0 15%;
+  background-color: #3f6660;
+}
+
+.navigation-button {
+  display: block;
+  width: 9rem;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  font-size: 1.3rem;
+  color: white;
+  background-color: #3f6660;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Main */
+main {
+  background-color: rgb(218, 218, 218);
+  padding: 2rem;
+}
+
+.product-list {
+  margin: auto 10%;
+}
+
+.product {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 30rem;
+  margin: auto;
+  margin-bottom: 2rem;
+  border: 3px solid black;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+}
+
+.product-info {
+  margin: 2rem;
+}
+
+.product-title {
+  font-size: 2em;
+  line-height: 1.2em;
+}
+
+.product-price {
+  font-size: 1.2rem;
+}
+
+img,
+.product-image,
+.product-image-preview {
+  width: 100%;
+  height: auto;
+}
+
+/* Product page */
+.container {
+  border: 3px solid black;
+  background-color: white;
+  max-width: 30rem;
+  margin: auto;
+  padding: 2rem;
+}
+
+.product-buy-button {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #3f6660;
+  padding: 1rem;
+  border-radius: 14px;
+  border: 2px solid black;
+}
+
+.product-description {
+  line-height: 1.5em;
+  max-width: 40em;
+}
+
+/* Contact page */
+.contact-container {
+  margin: auto 2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  width: 100%;
+  height: 3rem;
+  border-radius: 14px;
+  border: 2px solid black;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+textarea {
+  min-width: 100%;
+  max-width: 100%;
+  border-radius: 14px;
+  border: 2px solid black;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  color: #3f6660;
+  font-size: 1.4em;
+  border-radius: 14px;
+  border: 2px solid #3f6660;
+  background-color: #8bdf83;
+}
+
+/* Medium sized screen */
+@media only screen and (min-width: 900px) {
+  /* Nav bar */
+  header {
+    display: grid;
+    grid-template-columns: 20rem auto max-content max-content;
+    grid-template-areas: "logo gap home contact";
+    column-gap: 1rem;
+    margin: 3rem;
+    padding: 2rem;
+    background-color: lightgray;
+  }
+
+  .logo {
+    grid-area: logo;
+    height: 10rem;
+    justify-self: start;
+  }
+
+  .navigation-button {
+    align-self: center;
+  }
+
+  .home {
+    grid-area: home;
+  }
+
+  .contact {
+    grid-area: contact;
+  }
+
+  /* Main */
+  .product-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  /* Product page */
+  .container {
+    display: grid;
+    grid-template-columns: 20rem auto;
+    column-gap: 2rem;
+    margin: auto 3rem;
+    max-width: none;
+  }
+
+  .product-buy-button {
+    width: 13rem;
+  }
+
+  /* Contact page */
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "fields details";
+    column-gap: 8rem;
+  }
+
+  .contact-details {
+    grid-area: details;
+    font-size: larger;
+  }
+}
+
+/* Large sized screen */
+@media only screen and (min-width: 1300px) {
+  header {
+    padding-right: 3rem;
+  }
+
+  /* Product page */
+  .product-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .container {
+    grid-template-columns: 30rem auto;
+    margin: auto 6rem;
+    padding: 4rem;
+  }
+
+  .product-image {
+    width: 30rem;
+  }
+
+  /* Contact page */
+  .contact-container {
+    margin: auto 5%;
+  }
+}

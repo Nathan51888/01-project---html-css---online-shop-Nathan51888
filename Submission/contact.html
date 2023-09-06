@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact page" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="images/logo.png" alt="logo" />
+      <a class="navigation-button home" href="index.html">Home</a>
+      <a class="navigation-button contact" href="contact.html">Contact</a>
+    </header>
+    <main>
+      <form class="contact-container">
+        <div class="contact-fields">
+          <h2>Feel free to get in touch anytime</h2>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required />
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required />
+          <label for="message">Message</label>
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            required
+          ></textarea>
+          <button type="submit">Contact us</button>
+        </div>
+        <div class="contact-details">
+          <h3>Contact details</h3>
+          <p>
+            123 Fake Street, <br />
+            Auckland, <br />
+            New Zealand <br />
+            <br />
+            Phone: 09 123 45678 <br />
+            Email: sales@plantsandthings.co.nz
+          </p>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
